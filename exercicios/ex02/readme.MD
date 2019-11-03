@@ -28,6 +28,8 @@ $ docker run -p 8087:9090 -e APP_NAME=Rodrigo -e APP_COLOR=yellow rodrigolab/ex0
 ```
 
 ### Argumentos
+```bash
 -p 8087:9090 -> mapeamento pedido no exercicio, da porta padrao 9090 para a porta 8087.
 -e APP_NAME=Rodrigo -> pedido no exercicio, variavel de ambiente usada para exibir o nome no h1 do index
 -e APP_COLOR=yellow -> pedido no exercicio, variavel de ambiente usada para exibir uma cor como background do index.
+```
