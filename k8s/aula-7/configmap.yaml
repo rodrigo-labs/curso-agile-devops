@@ -1,0 +1,13 @@
+apiVersion: v1
+data:
+  another-param: another-value
+  config.txt: ""
+  extra-param: extra-value
+kind: ConfigMap
+metadata:
+  creationTimestamp: "2019-11-18T21:57:12Z"
+  name: rodrigo-config
+  namespace: default
+  resourceVersion: "6319"
+  selfLink: /api/v1/namespaces/default/configmaps/rodrigo-config
+  uid: 600fd288-0a4e-11ea-b1ab-42010a8e0023

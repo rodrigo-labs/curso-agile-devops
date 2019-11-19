@@ -1,0 +1,31 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: kuard-config-rodrigo
+spec:
+  containers:
+    - name: test-container
+      image: gcr.io/kuar-demo/kuard-amd64:1
+      imagePullPolicy: Always
+      command:
+        - "/kuard"
+        - "$(EXTRA_PARAM)"
+      env:
+        - name: ANOTHER_PARAM
+          valueFrom:
+            configMapKeyRef:
+              name: rodrigo-config
+              key: another-param
+        - name: EXTRA_PARAM
+          valueFrom:
+            configMapKeyRef:
+              name: rodrigo-config
+              key: extra-param
+      volumeMounts:
+        - name: config-volume
+          mountPath: /config
+  volumes:
+    - name: config-volume
+      configMap:
+        name: rodrigo-config
+  restartPolicy: Never
